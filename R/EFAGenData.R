@@ -370,4 +370,9 @@ EFACompData <- function(data, f.max, n.pop = 10000, n.samples = 500,
          main = "Fit to Comparison Data")
     abline(v = f.cd - 1, lty = 3)
   }
+
+
+  return(f.cd - 1)
+
+
 }
