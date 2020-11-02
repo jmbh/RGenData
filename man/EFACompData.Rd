@@ -7,7 +7,7 @@ Comparison data
 }
 \usage{
 EFACompData(data, f.max, n.pop = 10000, n.samples = 500, alpha = .30, graph = FALSE,
-corr.type = "pearson")
+corr.type = "pearson", verbatim = TRUE)
 }
 \arguments{
   \item{data}{Matrix to store the simulated data (matrix).}
@@ -17,6 +17,8 @@ corr.type = "pearson")
   \item{alpha}{Alpha level when testing statistical significance of improvement with additional factor (scalar, default is .30)}
   \item{graph}{Whether to plot the fit of eigenvalues to those for comparison data (default is FALSE).}
   \item{corr.type}{Type of correlation (character, default is "pearson", user can also call "spearman").}
+}
+  \item{verbatim}{If FALSE, the selected number of factors is printed in the console.}
 }
 \value{
 Nothing, displays number of factors on screen.

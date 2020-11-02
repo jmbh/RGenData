@@ -1,6 +1,6 @@
 GenDataPopulation <- function(supplied.data, n.factors, n.cases, max.trials = 5,
                               initial.multiplier = 1, corr.type = "pearson",
-                              seed = 0 ) {
+                              seed = 0) {
 # Simulates multivariate nonnormal data using an iterative algorithm
 #
 # Args:
@@ -309,7 +309,8 @@ FactorAnalysis <- function(data, corr.matrix = FALSE, max.iteration = 50,
 ################################################################################
 
 EFACompData <- function(data, f.max, n.pop = 10000, n.samples = 500,
-                        alpha = .30, graph = FALSE, corr.type = "pearson") {
+                        alpha = .30, graph = FALSE, corr.type = "pearson",
+                        verbatim = TRUE) {
 # Comparison data
 #
 # Args:
@@ -357,7 +358,7 @@ EFACompData <- function(data, f.max, n.pop = 10000, n.samples = 500,
     if (sig)
       f.cd <- f.cd + 1
   }
-  cat("Number of factors to retain: ", f.cd - 1, "\n")
+  if(!verbatim) cat("Number of factors to retain: ", f.cd - 1, "\n")
   if (graph) {
     if (sig) {
       x.max <- f.cd - 1
